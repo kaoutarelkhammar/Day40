@@ -4,7 +4,7 @@ const winston = require('winston');
 
 // Create a logger instance
 const logger = winston.createLogger({
-  level: 'info',
+  level: 'warn',
   format: winston.format.combine(
     winston.format.timestamp(),
     winston.format.json()
@@ -29,7 +29,7 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-const port = 3000;
+const port = 4000;
 const ip = '127.0.0.1';
 
 server.listen(port, ip, () => {
